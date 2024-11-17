@@ -73,12 +73,51 @@ if (hour < 12) {
 //
 
 let ball = document.querySelector('#ball');
+let grid = document.querySelector('.ballCont')
+
+/*const layout = [
+  0,0,0,1,0,0,0,1,1,0,
+  1,0,0,0,0,0,0,0,0,0,
+  0,1,0,1,0,1,0,0,0,1,
+  1,0,0,0,1,0,0,1,0,0,
+  1,0,0,0,1,0,0,1,0,0,
+  0,1,0,1,0,1,0,0,0,1,
+  0,1,0,1,0,1,0,0,0,1,
+  1,0,0,0,1,0,0,1,0,0,
+  1,0,0,0,1,0,0,1,0,0,
+  1,0,0,0,1,0,0,1,0,1
+]
+
+let squareArray = []
+
+function createBoard(){
+  
+  for(let i=0; i< layout.length; i++ ){
+    const square = document.createElement('div')
+    if(layout[i]=== 1){
+    square.classList.add('wall')
+  } else if( layout[i] === 0){
+   square.classList.add('path')
+  }
+
+  
+  grid.appendChild(square)
+  
+  
+
+}
+}
+
+createBoard()*/
+
+
+
 
 let positionX = 0;
 let positionY = 0;
 
 window.addEventListener('keydown', function (event) {
-  if (event.key === 'ArrowRight') {
+  if (event.key === 'ArrowRight' ){
     positionX += 10;
   } else if (event.key === 'ArrowLeft') {
     positionX -= 10;
@@ -87,6 +126,7 @@ window.addEventListener('keydown', function (event) {
   } else if (event.key === 'ArrowDown') {
     positionY += 10;
   }
-
+  
   ball.style.transform = `translate(${positionX}px, ${positionY}px)`;
 });
+
